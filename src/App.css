@@ -1,0 +1,201 @@
+@import url(https://fonts.googleapis.com/css?family=Courgette|Handlee);
+
+#map {
+  width: 100%;
+  height: calc(100vh - 60px);
+}
+
+.wrap-filter {
+  width: 100%;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  background-color: #ffca28;
+}
+
+.app-title {
+  position: relative;
+  left: calc(50% - 215px);
+  color: #222;
+  font-family: "Handlee", cursive;
+}
+
+.filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100vh;
+  background-color: #fff9c5;
+  overflow: auto;
+  z-index: 10;
+
+  transform: translateX(-100%);
+  transition: transform 200ms linear;
+  
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ef495b;
+  border-radius: 3px;
+}
+
+.filter_open {
+  transform: translateX(0);
+}
+
+.filter-list .filter-item {
+  list-style: none;
+}
+
+.filter-item {
+  padding: 20px 15px;
+  border-bottom: 1px dotted #1eb8e8;
+}
+
+.filter-item-action {
+  color: #1eb8e8;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.btnFilter {
+  width: 32px;
+  display: block;
+  background: 15px center no-repeat;
+  padding: 20px 15px;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+
+.btnFilter_open {
+  background-image: url(./images/filter-btn-pink.png);
+}
+
+.btnFilter_close {
+  background-image: url(./images/filter-btn-yellow.png);
+}
+
+.filter-top {
+  background-color: #ef495b;
+}
+
+.filter-input {
+  width: calc(100% - 30px);
+  padding: 20px 15px;
+  font-size: 1.25em;
+}
+
+.error-wrap {
+ display: inline-flex;
+ align-items: center;  
+}
+
+.error-message {
+  color: #ef495b;
+  font-weight: bold;  
+}
+
+.info-wrap {
+  display: block;
+}
+
+.info-photo {
+  max-width: 100%;
+}
+
+.info-name {
+  text-align: center;
+  color: #1eb8e8;
+}
+
+.info-address,
+.info-position,
+.info-rating,
+.info-likes,
+.info-tips {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ef495b;
+}
+
+.info-tips {
+  text-align: justify;
+}
+
+.info-link {
+  text-decoration: none;
+  color: #ef495b;
+}
+
+.info-fslogo {
+  max-width: 100%;
+  vertical-align: middle;  
+}
+
+/* Media queries */
+
+@media screen and (max-width: 825px) {
+
+  .app-title {
+    left: calc(50% - 177px);
+    font-size: 1.5em;
+  }
+
+  .filter {
+    width: 25%;
+  }
+
+  .filter-input {
+    width: calc(100% - 20px);
+    padding: 15px 10px;
+    font-size: 1em;
+  }
+
+  .filter-item {
+    padding: 15px 10px;
+  }
+
+  .filter-item-action {
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (max-width: 415px) {
+
+  .app-title {
+    left: calc(50% - 153px);
+    font-size: 1.2em;
+  }
+
+  .filter {
+    width: 45%;
+  }
+
+  .filter-input {
+    width: calc(100% - 20px);
+    padding: 15px 10px;
+    font-size: 1em;
+  }
+
+  .filter-item {
+    padding: 15px 10px;
+  }
+
+  .filter-item-action {
+    font-size: 0.7em;
+  }
+
+  .info-wrap {
+    height: 320px;
+  }
+}
